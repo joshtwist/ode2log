@@ -6,12 +6,11 @@ function Logger2() {
 	};
 
 	this.logEvent = function(message, params) {
+		if (params === null) { params = {} };
 	  utils.log("L2 Message :" + message);
-	  utils.log("L2 Params :" + params);
-	  utils.log("L2 Config :" + this.config);
+	  utils.log("L2 Params :" + JSON.stringify(params));
+	  utils.log("L2 Config :" + JSON.stringify(this.config);
 	};
-
-
 }
 
 module.exports = new Logger2();
