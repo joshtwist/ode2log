@@ -5,7 +5,7 @@ module.exports.init = function(config) {
   utils.log(config);
 }
 
-module.exports.log = function(message, params) {
+module.exports.logEvent = function(message, params) {
   utils.log("Message :" + message);
   utils.log("Params :" + params);
 }
