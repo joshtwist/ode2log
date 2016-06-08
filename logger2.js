@@ -9,7 +9,7 @@ function Logger2() {
 		if (params === null) { params = {} };
 	  utils.log("L2 Message :" + message);
 	  utils.log("L2 Params :" + JSON.stringify(params));
-	  utils.log("L2 Config :" + JSON.stringify(this.config);
+	  utils.log("L2 Config :" + JSON.stringify(this.config));
 	};
 }
 
