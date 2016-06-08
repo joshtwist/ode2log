@@ -1,3 +1,5 @@
+utils.log("in logger1");
+
 module.exports.init = function(config) {
   utils.log("Configuration recevied");
   utils.log(config);
