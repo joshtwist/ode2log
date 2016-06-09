@@ -24,8 +24,8 @@ function FB() {
 			advertiser_id: clientParams.idfa,
 			application_tracking_enabled: 1, // TODO - actually read
 			advertiser_tracking_enabled: 1, // TODO - actually read
-			custom_events: JSON.stringify([params]);
-		}
+			custom_events: JSON.stringify([params])
+		};
 
 		utils.postBodyThen('https://graph.facebook.com/v2.6/' + encodeURIComponent(this.config.appid) + '/activities', objToBody(body), function(rs) {
 			utils.log(rs);
