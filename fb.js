@@ -1,4 +1,4 @@
-function objToGABody(obj) {
+function objToBody(obj) {
 	var s = "";
 	for (var prop in obj) {
 		s += encodeURIComponent(prop) + "=";
@@ -10,7 +10,7 @@ function objToGABody(obj) {
 	return s;
 }
 
-function GA() {
+function FB() {
 	this.init = function(config) {
 		  this.config = config;
 	};
@@ -18,19 +18,14 @@ function GA() {
 	this.logEvent = function(event, params, clientParams) {
 
 		var body = {
-			v: 1,
-			tid: this.config.tid,
-			cid: this.config.cid, // TODO how do you get client 'config'
-			t: 'event',
-			ec: 'tbd',
-			el: event,
-			ea: event,
+			event: event,
+			advertiser_id: clientParams.idfa,
 		}
 
-		utils.postBodyThen('https://www.google-analytics.com/collect', objToGABody(body), function(rs) {
+		utils.postBodyThen('https://graph.facebook.com/v2.6/' + encodeURIComponent(this.config.appid) + '/activities', objToBody(body), function(rs) {
 			utils.log(rs);
 		});
 	};
 }
 
-module.exports = new GA();
+module.exports = new FB();

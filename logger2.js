@@ -5,10 +5,11 @@ function Logger2() {
 		  this.config = config;
 	};
 
-	this.logEvent = function(message, params) {
+	this.logEvent = function(event, params, clientParams) {
 		if (params === null) { params = {} };
-	  utils.log("L2 Message :" + message);
+	  utils.log("L2 Message :" + event);
 	  utils.log("L2 Params :" + JSON.stringify(params));
+	  utils.log("L2 Client :" + JSON.stringify(clientParams));
 	  utils.log("L2 Config :" + JSON.stringify(this.config));
 	};
 }
