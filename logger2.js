@@ -1,7 +1,5 @@
 function Logger2() {
 	this.init = function(config) {
-		  utils.log("L2Configuration recevied");
-		  utils.log(config);
 		  this.config = config;
 	};
 
