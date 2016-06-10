@@ -21,12 +21,12 @@ function Amplitude() {
 		var eventPayload = [params];
 
 		var body = {
-			"api-key" : config.apiKey,
+			"api_key" : config.api_key,
 			"event" : JSON.stringify(eventPayload)
 		};
 
 		utils.postBodyThen('https://api.amplitude.com/httpapi', objToBody(body), function(rs) {
-			utils.log(rs);
+			utils.log('Amplitude: ' + rs);
 		});
 	};
 }

@@ -18,7 +18,7 @@
     "name": "Amplitude",
     "source": "https://raw.githubusercontent.com/joshtwist/ode2log/master/amplitude.js",
     "config": {
-        "apiKey": "040062a5d38552315b98302ba4f2f"
+        "api_key": "040062a5d38552315b98302ba4f2f"
     }
  }
 ]
