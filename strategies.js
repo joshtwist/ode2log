@@ -15,10 +15,10 @@
     }
  },
  {
-    "name": "Logger2",
-    "source": "https://raw.githubusercontent.com/joshtwist/ode2log/master/logger2.js",
+    "name": "Amplitude",
+    "source": "https://raw.githubusercontent.com/joshtwist/ode2log/master/amplitude.js",
     "config": {
-        "appid": 987654
+        "apiKey": "040062a5d38552315b98302ba4f2f"
     }
  }
 ]
