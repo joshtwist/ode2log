@@ -18,6 +18,7 @@ function Amplitude() {
 	this.logEvent = function(event, params, clientParams) {
 
 		params.event_type = event;
+		params.device_id = clientParams.idfa;
 		var eventPayload = [params];
 
 		var body = {
